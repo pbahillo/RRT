@@ -1,0 +1,265 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10707,        255]
+NotebookOptionsPosition[      9877,        233]
+NotebookOutlinePosition[     10215,        248]
+CellTagsIndexPosition[     10172,        245]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"<<", " ", "/home/pablo/Escritorio/Uni/RRT/drawTx.m"}]}]], "Input",
+ CellChangeTimes->{{3.7178499477819777`*^9, 
+  3.7178499960246973`*^9}},ExpressionUUID->"a3b54caf-223b-4082-8540-\
+5d8d6285e527"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"SetIniParDraw", "[", 
+    RowBox[{"1", ",", "5"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"a", "=", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "20", ",", "0", ",", "0", ",", "0"}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"DrawWin", "[", 
+      RowBox[{"0", ",", "100", ",", "8"}], "]"}], ",", 
+     RowBox[{"DrawPacketTx", "[", "a", "]"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{
+  3.7178503767999153`*^9, {3.7178504149195633`*^9, 
+   3.717850541054391*^9}},ExpressionUUID->"522145b0-2041-4f05-8dbf-\
+6e90edbd13fe"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {GrayLevel[0], LineBox[{{0, 0}, {100, 0}}], LineBox[{{0, 25}, {100, 25}}]}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{0, 0}, 
+     NCache[{Rational[1, 480], -2.5}, {0.0020833333333333333`, -2.5}]], 
+    {Dashing[{Small, Small}], LineBox[{{0, 0}, {1, 25}}], 
+     LineBox[NCache[{{Rational[1, 480], 0}, {Rational[481, 480], 25}}, {{
+        0.0020833333333333333`, 0}, {1.0020833333333334`, 25}}]], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[
+       NCache[{Rational[481, 480], 25}, {1.0020833333333334`, 25}], 
+       NCache[{Rational[2881, 480], 27.5}, {6.002083333333333, 27.5}]], 
+      {GrayLevel[0], Dashing[{Small, Small}], 
+       LineBox[NCache[{{Rational[481, 480], 25}, {Rational[961, 480], 0}}, {{
+          1.0020833333333334`, 25}, {2.002083333333333, 0}}]], 
+       LineBox[NCache[{{Rational[2881, 480], 25}, {
+          Rational[3361, 480], 0}}, {{6.002083333333333, 25}, {
+          7.002083333333333, 0}}]], 
+       InsetBox["\<\"0\"\>", 
+        NCache[{Rational[481, 960], Rational[25, 2]}, {0.5010416666666667, 
+         12.5}]]}}}}},
+  AspectRatio->Automatic,
+  Axes->{True, False},
+  AxesOrigin->Automatic]], "Output",
+ CellChangeTimes->{{3.717850526822198*^9, 
+  3.717850541773547*^9}},ExpressionUUID->"146f5157-6eed-4194-a92a-\
+88c1f3303952"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"lstPck", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"2", "+", 
+          RowBox[{"n", "*", "10"}]}], ",", "9600", ",", 
+         RowBox[{"n", "+", "1"}], ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"n", ",", "0", ",", "9"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"DrawWin", "[", 
+      RowBox[{"0", ",", "100", ",", "8"}], "]"}], ",", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"DrawPacketTx", "[", "#", "]"}], "&"}], ",", "lstPck"}], 
+      "]"}]}], "]"}], "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.717850672268572*^9, 3.717850734566319*^9}, {
+   3.717850864026009*^9, 3.717850883313328*^9}, {3.7178509462081633`*^9, 
+   3.717850976571512*^9}, 3.7178510075777073`*^9, {3.717852203009377*^9, 
+   3.717852203667015*^9}},ExpressionUUID->"820b21a2-0e6d-4ed1-82bb-\
+246842f34c95"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {GrayLevel[0], LineBox[{{0, 0}, {100, 0}}], LineBox[{{0, 25}, {100, 25}}]}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{2, 0}, {3, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{2, 0}, {3, 25}}], 
+     LineBox[{{3, 0}, {4, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{4, 25}, {9, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{4, 25}, {5, 0}}], 
+       LineBox[{{9, 25}, {10, 0}}], 
+       InsetBox["\<\"1\"\>", NCache[{3, Rational[25, 2]}, {3, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{12, 0}, {13, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{12, 0}, {13, 25}}], 
+     LineBox[{{13, 0}, {14, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{14, 25}, {19, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{14, 25}, {15, 0}}], 
+       LineBox[{{19, 25}, {20, 0}}], 
+       InsetBox["\<\"2\"\>", NCache[{13, Rational[25, 2]}, {13, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{22, 0}, {23, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{22, 0}, {23, 25}}], 
+     LineBox[{{23, 0}, {24, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{24, 25}, {29, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{24, 25}, {25, 0}}], 
+       LineBox[{{29, 25}, {30, 0}}], 
+       InsetBox["\<\"3\"\>", NCache[{23, Rational[25, 2]}, {23, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{32, 0}, {33, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{32, 0}, {33, 25}}], 
+     LineBox[{{33, 0}, {34, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{34, 25}, {39, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{34, 25}, {35, 0}}], 
+       LineBox[{{39, 25}, {40, 0}}], 
+       InsetBox["\<\"4\"\>", NCache[{33, Rational[25, 2]}, {33, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{42, 0}, {43, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{42, 0}, {43, 25}}], 
+     LineBox[{{43, 0}, {44, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{44, 25}, {49, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{44, 25}, {45, 0}}], 
+       LineBox[{{49, 25}, {50, 0}}], 
+       InsetBox["\<\"5\"\>", NCache[{43, Rational[25, 2]}, {43, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{52, 0}, {53, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{52, 0}, {53, 25}}], 
+     LineBox[{{53, 0}, {54, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{54, 25}, {59, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{54, 25}, {55, 0}}], 
+       LineBox[{{59, 25}, {60, 0}}], 
+       InsetBox["\<\"6\"\>", NCache[{53, Rational[25, 2]}, {53, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{62, 0}, {63, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{62, 0}, {63, 25}}], 
+     LineBox[{{63, 0}, {64, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{64, 25}, {69, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{64, 25}, {65, 0}}], 
+       LineBox[{{69, 25}, {70, 0}}], 
+       InsetBox["\<\"7\"\>", NCache[{63, Rational[25, 2]}, {63, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{72, 0}, {73, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{72, 0}, {73, 25}}], 
+     LineBox[{{73, 0}, {74, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{74, 25}, {79, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{74, 25}, {75, 0}}], 
+       LineBox[{{79, 25}, {80, 0}}], 
+       InsetBox["\<\"0\"\>", NCache[{73, Rational[25, 2]}, {73, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{82, 0}, {83, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{82, 0}, {83, 25}}], 
+     LineBox[{{83, 0}, {84, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{84, 25}, {89, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{84, 25}, {85, 0}}], 
+       LineBox[{{89, 25}, {90, 0}}], 
+       InsetBox["\<\"1\"\>", NCache[{83, Rational[25, 2]}, {83, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{92, 0}, {93, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{92, 0}, {93, 25}}], 
+     LineBox[{{93, 0}, {94, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{94, 25}, {99, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{94, 25}, {95, 0}}], 
+       LineBox[{{99, 25}, {100, 0}}], 
+       InsetBox["\<\"2\"\>", NCache[{93, Rational[25, 2]}, {93, 12.5}]]}}}}},
+  AspectRatio->Automatic,
+  Axes->{True, False},
+  AxesOrigin->Automatic]], "Output",
+ CellChangeTimes->{3.7178510082771273`*^9, 
+  3.717852225454816*^9},ExpressionUUID->"1b2deba3-c131-438e-84a5-\
+9bced3d8c867"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"SetIniParDraw", "[", 
+    RowBox[{".5", ",", "0"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"a", "=", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "9600", ",", "0", ",", "0", ",", "0"}], "}"}]}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"DrawWin", "[", 
+      RowBox[{"0", ",", "100", ",", "8"}], "]"}], ",", 
+     RowBox[{"DrawPacketTx", "[", "a", "]"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{
+  3.7178516810740747`*^9, {3.71785199115534*^9, 3.717852030714261*^9}, {
+   3.717852103059279*^9, 
+   3.717852110746196*^9}},ExpressionUUID->"6606d92b-d25e-4053-9e88-\
+a80297c310bd"]
+},
+WindowSize->{1295, 744},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.2 for Linux x86 (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 254, 5, 55, "Input",ExpressionUUID->"a3b54caf-223b-4082-8540-5d8d6285e527"],
+Cell[CellGroupData[{
+Cell[837, 29, 683, 18, 124, "Input",ExpressionUUID->"522145b0-2041-4f05-8dbf-6e90edbd13fe"],
+Cell[1523, 49, 1364, 27, 137, "Output",ExpressionUUID->"146f5157-6eed-4194-a92a-88c1f3303952"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2924, 81, 1062, 28, 101, "Input",ExpressionUUID->"820b21a2-0e6d-4ed1-82bb-246842f34c95"],
+Cell[3989, 111, 5158, 98, 137, "Output",ExpressionUUID->"1b2deba3-c131-438e-84a5-9bced3d8c867"]
+}, Open  ]],
+Cell[9162, 212, 711, 19, 101, "Input",ExpressionUUID->"6606d92b-d25e-4053-9e88-a80297c310bd"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
