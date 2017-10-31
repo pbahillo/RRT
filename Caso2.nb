@@ -10,215 +10,43 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10707,        255]
-NotebookOptionsPosition[      9877,        233]
-NotebookOutlinePosition[     10215,        248]
-CellTagsIndexPosition[     10172,        245]
+NotebookDataLength[     30960,        681]
+NotebookOptionsPosition[     29638,        654]
+NotebookOutlinePosition[     29978,        669]
+CellTagsIndexPosition[     29935,        666]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
-  RowBox[{"<<", " ", "/home/pablo/Escritorio/Uni/RRT/drawTx.m"}]}]], "Input",
- CellChangeTimes->{{3.7178499477819777`*^9, 
-  3.7178499960246973`*^9}},ExpressionUUID->"a3b54caf-223b-4082-8540-\
+  RowBox[{
+   RowBox[{"<<", " ", "\"\</home/pablo/Escritorio/Uni/RRT/drawTx.m\>\""}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+   "<<", " ", 
+    "\"\</home/pablo/Escritorio/Uni/RRT/RandomData.m\>\""}]}]}]], "Input",
+ CellChangeTimes->{{3.7178499477819777`*^9, 3.7178499960246973`*^9}, {
+  3.718456198963358*^9, 3.7184561995383472`*^9}, {3.718458225788794*^9, 
+  3.718458233196801*^9}},ExpressionUUID->"a3b54caf-223b-4082-8540-\
 5d8d6285e527"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
-  RowBox[{
-   RowBox[{"SetIniParDraw", "[", 
-    RowBox[{"1", ",", "5"}], "]"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"a", "=", 
-     RowBox[{"{", 
-      RowBox[{"0", ",", "20", ",", "0", ",", "0", ",", "0"}], "}"}]}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{"Show", "[", 
-    RowBox[{
-     RowBox[{"DrawWin", "[", 
-      RowBox[{"0", ",", "100", ",", "8"}], "]"}], ",", 
-     RowBox[{"DrawPacketTx", "[", "a", "]"}]}], "]"}]}]}]], "Input",
- CellChangeTimes->{
-  3.7178503767999153`*^9, {3.7178504149195633`*^9, 
-   3.717850541054391*^9}},ExpressionUUID->"522145b0-2041-4f05-8dbf-\
-6e90edbd13fe"],
-
-Cell[BoxData[
- GraphicsBox[{
-   {GrayLevel[0], LineBox[{{0, 0}, {100, 0}}], LineBox[{{0, 25}, {100, 25}}]}, 
-   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-    RectangleBox[{0, 0}, 
-     NCache[{Rational[1, 480], -2.5}, {0.0020833333333333333`, -2.5}]], 
-    {Dashing[{Small, Small}], LineBox[{{0, 0}, {1, 25}}], 
-     LineBox[NCache[{{Rational[1, 480], 0}, {Rational[481, 480], 25}}, {{
-        0.0020833333333333333`, 0}, {1.0020833333333334`, 25}}]], 
-     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-      RectangleBox[
-       NCache[{Rational[481, 480], 25}, {1.0020833333333334`, 25}], 
-       NCache[{Rational[2881, 480], 27.5}, {6.002083333333333, 27.5}]], 
-      {GrayLevel[0], Dashing[{Small, Small}], 
-       LineBox[NCache[{{Rational[481, 480], 25}, {Rational[961, 480], 0}}, {{
-          1.0020833333333334`, 25}, {2.002083333333333, 0}}]], 
-       LineBox[NCache[{{Rational[2881, 480], 25}, {
-          Rational[3361, 480], 0}}, {{6.002083333333333, 25}, {
-          7.002083333333333, 0}}]], 
-       InsetBox["\<\"0\"\>", 
-        NCache[{Rational[481, 960], Rational[25, 2]}, {0.5010416666666667, 
-         12.5}]]}}}}},
-  AspectRatio->Automatic,
-  Axes->{True, False},
-  AxesOrigin->Automatic]], "Output",
- CellChangeTimes->{{3.717850526822198*^9, 
-  3.717850541773547*^9}},ExpressionUUID->"146f5157-6eed-4194-a92a-\
-88c1f3303952"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
-    RowBox[{"lstPck", "=", 
-     RowBox[{"Table", "[", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"2", "+", 
-          RowBox[{"n", "*", "10"}]}], ",", "9600", ",", 
-         RowBox[{"n", "+", "1"}], ",", "0", ",", "0"}], "}"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"n", ",", "0", ",", "9"}], "}"}]}], "]"}]}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{"Show", "[", 
-    RowBox[{
-     RowBox[{"DrawWin", "[", 
-      RowBox[{"0", ",", "100", ",", "8"}], "]"}], ",", 
-     RowBox[{"Map", "[", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"DrawPacketTx", "[", "#", "]"}], "&"}], ",", "lstPck"}], 
-      "]"}]}], "]"}], "\[IndentingNewLine]"}]}]], "Input",
- CellChangeTimes->{{3.717850672268572*^9, 3.717850734566319*^9}, {
-   3.717850864026009*^9, 3.717850883313328*^9}, {3.7178509462081633`*^9, 
-   3.717850976571512*^9}, 3.7178510075777073`*^9, {3.717852203009377*^9, 
-   3.717852203667015*^9}},ExpressionUUID->"820b21a2-0e6d-4ed1-82bb-\
-246842f34c95"],
-
-Cell[BoxData[
- GraphicsBox[{
-   {GrayLevel[0], LineBox[{{0, 0}, {100, 0}}], LineBox[{{0, 25}, {100, 25}}]}, 
-   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-    RectangleBox[{2, 0}, {3, -2.5}], 
-    {Dashing[{Small, Small}], LineBox[{{2, 0}, {3, 25}}], 
-     LineBox[{{3, 0}, {4, 25}}], 
-     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-      RectangleBox[{4, 25}, {9, 27.5}], 
-      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{4, 25}, {5, 0}}], 
-       LineBox[{{9, 25}, {10, 0}}], 
-       InsetBox["\<\"1\"\>", NCache[{3, Rational[25, 2]}, {3, 12.5}]]}}}}, 
-   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-    RectangleBox[{12, 0}, {13, -2.5}], 
-    {Dashing[{Small, Small}], LineBox[{{12, 0}, {13, 25}}], 
-     LineBox[{{13, 0}, {14, 25}}], 
-     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-      RectangleBox[{14, 25}, {19, 27.5}], 
-      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{14, 25}, {15, 0}}], 
-       LineBox[{{19, 25}, {20, 0}}], 
-       InsetBox["\<\"2\"\>", NCache[{13, Rational[25, 2]}, {13, 12.5}]]}}}}, 
-   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-    RectangleBox[{22, 0}, {23, -2.5}], 
-    {Dashing[{Small, Small}], LineBox[{{22, 0}, {23, 25}}], 
-     LineBox[{{23, 0}, {24, 25}}], 
-     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-      RectangleBox[{24, 25}, {29, 27.5}], 
-      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{24, 25}, {25, 0}}], 
-       LineBox[{{29, 25}, {30, 0}}], 
-       InsetBox["\<\"3\"\>", NCache[{23, Rational[25, 2]}, {23, 12.5}]]}}}}, 
-   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-    RectangleBox[{32, 0}, {33, -2.5}], 
-    {Dashing[{Small, Small}], LineBox[{{32, 0}, {33, 25}}], 
-     LineBox[{{33, 0}, {34, 25}}], 
-     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-      RectangleBox[{34, 25}, {39, 27.5}], 
-      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{34, 25}, {35, 0}}], 
-       LineBox[{{39, 25}, {40, 0}}], 
-       InsetBox["\<\"4\"\>", NCache[{33, Rational[25, 2]}, {33, 12.5}]]}}}}, 
-   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-    RectangleBox[{42, 0}, {43, -2.5}], 
-    {Dashing[{Small, Small}], LineBox[{{42, 0}, {43, 25}}], 
-     LineBox[{{43, 0}, {44, 25}}], 
-     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-      RectangleBox[{44, 25}, {49, 27.5}], 
-      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{44, 25}, {45, 0}}], 
-       LineBox[{{49, 25}, {50, 0}}], 
-       InsetBox["\<\"5\"\>", NCache[{43, Rational[25, 2]}, {43, 12.5}]]}}}}, 
-   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-    RectangleBox[{52, 0}, {53, -2.5}], 
-    {Dashing[{Small, Small}], LineBox[{{52, 0}, {53, 25}}], 
-     LineBox[{{53, 0}, {54, 25}}], 
-     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-      RectangleBox[{54, 25}, {59, 27.5}], 
-      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{54, 25}, {55, 0}}], 
-       LineBox[{{59, 25}, {60, 0}}], 
-       InsetBox["\<\"6\"\>", NCache[{53, Rational[25, 2]}, {53, 12.5}]]}}}}, 
-   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-    RectangleBox[{62, 0}, {63, -2.5}], 
-    {Dashing[{Small, Small}], LineBox[{{62, 0}, {63, 25}}], 
-     LineBox[{{63, 0}, {64, 25}}], 
-     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-      RectangleBox[{64, 25}, {69, 27.5}], 
-      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{64, 25}, {65, 0}}], 
-       LineBox[{{69, 25}, {70, 0}}], 
-       InsetBox["\<\"7\"\>", NCache[{63, Rational[25, 2]}, {63, 12.5}]]}}}}, 
-   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-    RectangleBox[{72, 0}, {73, -2.5}], 
-    {Dashing[{Small, Small}], LineBox[{{72, 0}, {73, 25}}], 
-     LineBox[{{73, 0}, {74, 25}}], 
-     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-      RectangleBox[{74, 25}, {79, 27.5}], 
-      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{74, 25}, {75, 0}}], 
-       LineBox[{{79, 25}, {80, 0}}], 
-       InsetBox["\<\"0\"\>", NCache[{73, Rational[25, 2]}, {73, 12.5}]]}}}}, 
-   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-    RectangleBox[{82, 0}, {83, -2.5}], 
-    {Dashing[{Small, Small}], LineBox[{{82, 0}, {83, 25}}], 
-     LineBox[{{83, 0}, {84, 25}}], 
-     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-      RectangleBox[{84, 25}, {89, 27.5}], 
-      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{84, 25}, {85, 0}}], 
-       LineBox[{{89, 25}, {90, 0}}], 
-       InsetBox["\<\"1\"\>", NCache[{83, Rational[25, 2]}, {83, 12.5}]]}}}}, 
-   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-    RectangleBox[{92, 0}, {93, -2.5}], 
-    {Dashing[{Small, Small}], LineBox[{{92, 0}, {93, 25}}], 
-     LineBox[{{93, 0}, {94, 25}}], 
-     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
-      RectangleBox[{94, 25}, {99, 27.5}], 
-      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{94, 25}, {95, 0}}], 
-       LineBox[{{99, 25}, {100, 0}}], 
-       InsetBox["\<\"2\"\>", NCache[{93, Rational[25, 2]}, {93, 12.5}]]}}}}},
-  AspectRatio->Automatic,
-  Axes->{True, False},
-  AxesOrigin->Automatic]], "Output",
- CellChangeTimes->{3.7178510082771273`*^9, 
-  3.717852225454816*^9},ExpressionUUID->"1b2deba3-c131-438e-84a5-\
-9bced3d8c867"]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", 
-  RowBox[{
-   RowBox[{"SetIniParDraw", "[", 
-    RowBox[{".5", ",", "0"}], "]"}], "\[IndentingNewLine]", 
+    RowBox[{"tTrans", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"longResp", "=", "0.5"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SetIniParDraw", "[", 
+     RowBox[{"tTrans", ",", "longResp"}], "]"}], ";"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"a", "=", 
      RowBox[{"{", 
-      RowBox[{"0", ",", "9600", ",", "0", ",", "0", ",", "0"}], "}"}]}], 
+      RowBox[{"5", ",", "9600", ",", "0", ",", "0", ",", "0"}], "}"}]}], 
     ";"}], "\[IndentingNewLine]", 
    RowBox[{"Show", "[", 
     RowBox[{
@@ -226,13 +54,606 @@ Cell[BoxData[
       RowBox[{"0", ",", "100", ",", "8"}], "]"}], ",", 
      RowBox[{"DrawPacketTx", "[", "a", "]"}]}], "]"}]}]}]], "Input",
  CellChangeTimes->{
-  3.7178516810740747`*^9, {3.71785199115534*^9, 3.717852030714261*^9}, {
-   3.717852103059279*^9, 
-   3.717852110746196*^9}},ExpressionUUID->"6606d92b-d25e-4053-9e88-\
-a80297c310bd"]
+  3.7178503767999153`*^9, {3.7178504149195633`*^9, 3.717850541054391*^9}, {
+   3.718456171523303*^9, 3.7184561814566793`*^9}, {3.718456527099122*^9, 
+   3.718456545281111*^9}, {3.71845675773177*^9, 3.718456771282812*^9}, {
+   3.71845763114668*^9, 
+   3.7184576655088167`*^9}},ExpressionUUID->"522145b0-2041-4f05-8dbf-\
+6e90edbd13fe"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {GrayLevel[0], LineBox[{{0, 0}, {100, 0}}], LineBox[{{0, 25}, {100, 25}}]}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{5, 0}, {6, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{5, 0}, {6, 25}}], 
+     LineBox[{{6, 0}, {7, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{7, 25}, {7.5, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{7, 25}, {8, 0}}], 
+       LineBox[{{7.5, 25}, {8.5, 0}}], 
+       InsetBox["\<\"0\"\>", NCache[{6, Rational[25, 2]}, {6, 12.5}]]}}}}},
+  AspectRatio->Automatic,
+  Axes->{True, False},
+  AxesOrigin->Automatic]], "Output",
+ CellChangeTimes->{{3.717850526822198*^9, 3.717850541773547*^9}, {
+   3.718456116881015*^9, 3.71845612764638*^9}, {3.718456184538254*^9, 
+   3.718456205433535*^9}, 3.7184563660240707`*^9, {3.718456529399849*^9, 
+   3.718456548444893*^9}, {3.718456760559606*^9, 3.718456771605259*^9}, 
+   3.718457457629405*^9, 3.718457667958014*^9, 
+   3.718458268093033*^9},ExpressionUUID->"b4db257b-d284-4144-972e-\
+e3ac72caff3a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"longPck", "=", "9600"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"lstPck", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"n", "*", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2", "*", "tTrans"}], "+", "longResp", "+", 
+          RowBox[{"longPck", "/", "9600"}]}], ")"}]}], ",", "longPck", ",", 
+       "n", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "0", ",", "50"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"DrawWin", "[", 
+    RowBox[{"0", ",", "100", ",", "4"}], "]"}], ",", 
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"DrawPacketTx", "[", "#", "]"}], "&"}], ",", "lstPck"}], 
+    "]"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"DrawWin", "[", 
+      RowBox[{"origin", ",", "ww", ",", "4"}], "]"}], ",", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"DrawPacketTx", "[", "#", "]"}], "&"}], ",", "lstPck"}], 
+      "]"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"origin", ",", "0", ",", 
+     RowBox[{"100", "-", "ww"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ww", ",", "10", ",", "50"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.717850672268572*^9, 3.717850734566319*^9}, {
+   3.717850864026009*^9, 3.717850883313328*^9}, {3.7178509462081633`*^9, 
+   3.717850976571512*^9}, 3.7178510075777073`*^9, {3.717852203009377*^9, 
+   3.717852203667015*^9}, {3.718456058484861*^9, 3.7184560675767508`*^9}, {
+   3.71845659259229*^9, 3.7184566027147827`*^9}, {3.7184566772568493`*^9, 
+   3.718456707723225*^9}, {3.718456811320043*^9, 3.718456812875292*^9}, {
+   3.7184568728367157`*^9, 3.718456919113797*^9}, {3.718457049348936*^9, 
+   3.7184570766626368`*^9}, {3.7184571346850977`*^9, 3.718457151329342*^9}, {
+   3.718457418911366*^9, 3.718457436119646*^9}, {3.718457505686479*^9, 
+   3.718457519173203*^9}, {3.718457596360956*^9, 3.71845762687403*^9}, {
+   3.718457697486374*^9, 3.718457721920333*^9}, {3.718457753679009*^9, 
+   3.718457815786237*^9}, {3.7184579051071777`*^9, 
+   3.718457905271659*^9}},ExpressionUUID->"820b21a2-0e6d-4ed1-82bb-\
+246842f34c95"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {GrayLevel[0], LineBox[{{0, 0}, {100, 0}}], LineBox[{{0, 25}, {100, 25}}]}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{0., 0}, {1., -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{0., 0}, {1., 25}}], 
+     LineBox[{{1., 0}, {2., 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{2., 25}, {2.5, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{2., 25}, {3., 0}}], 
+       LineBox[{{2.5, 25}, {3.5, 0}}], 
+       InsetBox["\<\"0\"\>", NCache[{1., Rational[25, 2]}, {1., 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{3.5, 0}, {4.5, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{3.5, 0}, {4.5, 25}}], 
+     LineBox[{{4.5, 0}, {5.5, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{5.5, 25}, {6., 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{5.5, 25}, {6.5, 0}}], 
+       LineBox[{{6., 25}, {7., 0}}], 
+       InsetBox["\<\"1\"\>", NCache[{4.5, Rational[25, 2]}, {4.5, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{7., 0}, {8., -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{7., 0}, {8., 25}}], 
+     LineBox[{{8., 0}, {9., 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{9., 25}, {9.5, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{9., 25}, {10., 0}}], 
+       LineBox[{{9.5, 25}, {10.5, 0}}], 
+       InsetBox["\<\"2\"\>", NCache[{8., Rational[25, 2]}, {8., 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{10.5, 0}, {11.5, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{10.5, 0}, {11.5, 25}}], 
+     LineBox[{{11.5, 0}, {12.5, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{12.5, 25}, {13., 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], 
+       LineBox[{{12.5, 25}, {13.5, 0}}], LineBox[{{13., 25}, {14., 0}}], 
+       InsetBox["\<\"3\"\>", 
+        NCache[{11.5, Rational[25, 2]}, {11.5, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{14., 0}, {15., -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{14., 0}, {15., 25}}], 
+     LineBox[{{15., 0}, {16., 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{16., 25}, {16.5, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{16., 25}, {17., 0}}], 
+       LineBox[{{16.5, 25}, {17.5, 0}}], 
+       InsetBox["\<\"0\"\>", NCache[{15., Rational[25, 2]}, {15., 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{17.5, 0}, {18.5, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{17.5, 0}, {18.5, 25}}], 
+     LineBox[{{18.5, 0}, {19.5, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{19.5, 25}, {20., 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], 
+       LineBox[{{19.5, 25}, {20.5, 0}}], LineBox[{{20., 25}, {21., 0}}], 
+       InsetBox["\<\"1\"\>", 
+        NCache[{18.5, Rational[25, 2]}, {18.5, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{21., 0}, {22., -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{21., 0}, {22., 25}}], 
+     LineBox[{{22., 0}, {23., 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{23., 25}, {23.5, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{23., 25}, {24., 0}}], 
+       LineBox[{{23.5, 25}, {24.5, 0}}], 
+       InsetBox["\<\"2\"\>", NCache[{22., Rational[25, 2]}, {22., 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{24.5, 0}, {25.5, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{24.5, 0}, {25.5, 25}}], 
+     LineBox[{{25.5, 0}, {26.5, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{26.5, 25}, {27., 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], 
+       LineBox[{{26.5, 25}, {27.5, 0}}], LineBox[{{27., 25}, {28., 0}}], 
+       InsetBox["\<\"3\"\>", 
+        NCache[{25.5, Rational[25, 2]}, {25.5, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{28., 0}, {29., -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{28., 0}, {29., 25}}], 
+     LineBox[{{29., 0}, {30., 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{30., 25}, {30.5, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{30., 25}, {31., 0}}], 
+       LineBox[{{30.5, 25}, {31.5, 0}}], 
+       InsetBox["\<\"0\"\>", NCache[{29., Rational[25, 2]}, {29., 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{31.5, 0}, {32.5, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{31.5, 0}, {32.5, 25}}], 
+     LineBox[{{32.5, 0}, {33.5, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{33.5, 25}, {34., 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], 
+       LineBox[{{33.5, 25}, {34.5, 0}}], LineBox[{{34., 25}, {35., 0}}], 
+       InsetBox["\<\"1\"\>", 
+        NCache[{32.5, Rational[25, 2]}, {32.5, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{35., 0}, {36., -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{35., 0}, {36., 25}}], 
+     LineBox[{{36., 0}, {37., 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{37., 25}, {37.5, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{37., 25}, {38., 0}}], 
+       LineBox[{{37.5, 25}, {38.5, 0}}], 
+       InsetBox["\<\"2\"\>", NCache[{36., Rational[25, 2]}, {36., 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{38.5, 0}, {39.5, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{38.5, 0}, {39.5, 25}}], 
+     LineBox[{{39.5, 0}, {40.5, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{40.5, 25}, {41., 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], 
+       LineBox[{{40.5, 25}, {41.5, 0}}], LineBox[{{41., 25}, {42., 0}}], 
+       InsetBox["\<\"3\"\>", 
+        NCache[{39.5, Rational[25, 2]}, {39.5, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{42., 0}, {43., -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{42., 0}, {43., 25}}], 
+     LineBox[{{43., 0}, {44., 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{44., 25}, {44.5, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{44., 25}, {45., 0}}], 
+       LineBox[{{44.5, 25}, {45.5, 0}}], 
+       InsetBox["\<\"0\"\>", NCache[{43., Rational[25, 2]}, {43., 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{45.5, 0}, {46.5, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{45.5, 0}, {46.5, 25}}], 
+     LineBox[{{46.5, 0}, {47.5, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{47.5, 25}, {48., 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], 
+       LineBox[{{47.5, 25}, {48.5, 0}}], LineBox[{{48., 25}, {49., 0}}], 
+       InsetBox["\<\"1\"\>", 
+        NCache[{46.5, Rational[25, 2]}, {46.5, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{49., 0}, {50., -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{49., 0}, {50., 25}}], 
+     LineBox[{{50., 0}, {51., 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{51., 25}, {51.5, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{51., 25}, {52., 0}}], 
+       LineBox[{{51.5, 25}, {52.5, 0}}], 
+       InsetBox["\<\"2\"\>", NCache[{50., Rational[25, 2]}, {50., 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{52.5, 0}, {53.5, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{52.5, 0}, {53.5, 25}}], 
+     LineBox[{{53.5, 0}, {54.5, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{54.5, 25}, {55., 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], 
+       LineBox[{{54.5, 25}, {55.5, 0}}], LineBox[{{55., 25}, {56., 0}}], 
+       InsetBox["\<\"3\"\>", 
+        NCache[{53.5, Rational[25, 2]}, {53.5, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{56., 0}, {57., -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{56., 0}, {57., 25}}], 
+     LineBox[{{57., 0}, {58., 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{58., 25}, {58.5, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{58., 25}, {59., 0}}], 
+       LineBox[{{58.5, 25}, {59.5, 0}}], 
+       InsetBox["\<\"0\"\>", NCache[{57., Rational[25, 2]}, {57., 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{59.5, 0}, {60.5, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{59.5, 0}, {60.5, 25}}], 
+     LineBox[{{60.5, 0}, {61.5, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{61.5, 25}, {62., 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], 
+       LineBox[{{61.5, 25}, {62.5, 0}}], LineBox[{{62., 25}, {63., 0}}], 
+       InsetBox["\<\"1\"\>", 
+        NCache[{60.5, Rational[25, 2]}, {60.5, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{63., 0}, {64., -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{63., 0}, {64., 25}}], 
+     LineBox[{{64., 0}, {65., 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{65., 25}, {65.5, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{65., 25}, {66., 0}}], 
+       LineBox[{{65.5, 25}, {66.5, 0}}], 
+       InsetBox["\<\"2\"\>", NCache[{64., Rational[25, 2]}, {64., 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{66.5, 0}, {67.5, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{66.5, 0}, {67.5, 25}}], 
+     LineBox[{{67.5, 0}, {68.5, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{68.5, 25}, {69., 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], 
+       LineBox[{{68.5, 25}, {69.5, 0}}], LineBox[{{69., 25}, {70., 0}}], 
+       InsetBox["\<\"3\"\>", 
+        NCache[{67.5, Rational[25, 2]}, {67.5, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{70., 0}, {71., -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{70., 0}, {71., 25}}], 
+     LineBox[{{71., 0}, {72., 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{72., 25}, {72.5, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{72., 25}, {73., 0}}], 
+       LineBox[{{72.5, 25}, {73.5, 0}}], 
+       InsetBox["\<\"0\"\>", NCache[{71., Rational[25, 2]}, {71., 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{73.5, 0}, {74.5, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{73.5, 0}, {74.5, 25}}], 
+     LineBox[{{74.5, 0}, {75.5, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{75.5, 25}, {76., 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], 
+       LineBox[{{75.5, 25}, {76.5, 0}}], LineBox[{{76., 25}, {77., 0}}], 
+       InsetBox["\<\"1\"\>", 
+        NCache[{74.5, Rational[25, 2]}, {74.5, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{77., 0}, {78., -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{77., 0}, {78., 25}}], 
+     LineBox[{{78., 0}, {79., 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{79., 25}, {79.5, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{79., 25}, {80., 0}}], 
+       LineBox[{{79.5, 25}, {80.5, 0}}], 
+       InsetBox["\<\"2\"\>", NCache[{78., Rational[25, 2]}, {78., 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{80.5, 0}, {81.5, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{80.5, 0}, {81.5, 25}}], 
+     LineBox[{{81.5, 0}, {82.5, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{82.5, 25}, {83., 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], 
+       LineBox[{{82.5, 25}, {83.5, 0}}], LineBox[{{83., 25}, {84., 0}}], 
+       InsetBox["\<\"3\"\>", 
+        NCache[{81.5, Rational[25, 2]}, {81.5, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{84., 0}, {85., -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{84., 0}, {85., 25}}], 
+     LineBox[{{85., 0}, {86., 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{86., 25}, {86.5, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{86., 25}, {87., 0}}], 
+       LineBox[{{86.5, 25}, {87.5, 0}}], 
+       InsetBox["\<\"0\"\>", NCache[{85., Rational[25, 2]}, {85., 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{87.5, 0}, {88.5, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{87.5, 0}, {88.5, 25}}], 
+     LineBox[{{88.5, 0}, {89.5, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{89.5, 25}, {90., 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], 
+       LineBox[{{89.5, 25}, {90.5, 0}}], LineBox[{{90., 25}, {91., 0}}], 
+       InsetBox["\<\"1\"\>", 
+        NCache[{88.5, Rational[25, 2]}, {88.5, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{91., 0}, {92., -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{91., 0}, {92., 25}}], 
+     LineBox[{{92., 0}, {93., 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{93., 25}, {93.5, 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{93., 25}, {94., 0}}], 
+       LineBox[{{93.5, 25}, {94.5, 0}}], 
+       InsetBox["\<\"2\"\>", NCache[{92., Rational[25, 2]}, {92., 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{94.5, 0}, {95.5, -2.5}], 
+    {Dashing[{Small, Small}], LineBox[{{94.5, 0}, {95.5, 25}}], 
+     LineBox[{{95.5, 0}, {96.5, 25}}], 
+     {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+      RectangleBox[{96.5, 25}, {97., 27.5}], 
+      {GrayLevel[0], Dashing[{Small, Small}], 
+       LineBox[{{96.5, 25}, {97.5, 0}}], LineBox[{{97., 25}, {98., 0}}], 
+       InsetBox["\<\"3\"\>", 
+        NCache[{95.5, Rational[25, 2]}, {95.5, 12.5}]]}}}}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{98., -2.5}, {99., 0}]}, 
+   {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{98., 0}, {99., 25}}]}, 
+   {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{99., 0}, {100., 25}}]}, 
+   {RGBColor[1, 0.5, 0.5], EdgeForm[Thickness[Tiny]], 
+    RectangleBox[{100., 27.5}, {100, 25}]}, 
+   {GrayLevel[0], Dashing[{Small, Small}], LineBox[{{100., 25}, {100, 25.}}]},
+    InsetBox["\<\"0\"\>", NCache[{99., Rational[25, 2]}, {99., 12.5}]]},
+  AspectRatio->Automatic,
+  Axes->{True, False},
+  AxesOrigin->Automatic]], "Output",
+ CellChangeTimes->{
+  3.7178510082771273`*^9, 3.717852225454816*^9, 3.7184562308742323`*^9, 
+   3.718456367994314*^9, 3.7184565314844513`*^9, 3.718456618292192*^9, {
+   3.7184566848477182`*^9, 3.718456709058766*^9}, {3.7184567636498117`*^9, 
+   3.718456773303515*^9}, 3.718456815038924*^9, {3.718456881073739*^9, 
+   3.7184569206702833`*^9}, 3.7184570899298563`*^9, {3.7184571372326317`*^9, 
+   3.7184571529331913`*^9}, {3.718457426374662*^9, 3.718457460536334*^9}, {
+   3.718457509498391*^9, 3.718457525299796*^9}, 3.7184576703943443`*^9, {
+   3.718457778008554*^9, 3.718457818668234*^9}, 3.7184579244201717`*^9, {
+   3.7184582622835407`*^9, 
+   3.7184582700936203`*^9}},ExpressionUUID->"e08e2d1c-a9b6-4558-a45d-\
+aacc01dcdc5e"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`origin$$ = 0, $CellContext`ww$$ = 10, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`origin$$], 0, 
+      Dynamic[100 - $CellContext`ww$$]}, {
+      Hold[$CellContext`ww$$], 10, 50}}, Typeset`size$$ = {360., {58., 62.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`origin$66417$$ = 0, $CellContext`ww$66418$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`origin$$ = 0, $CellContext`ww$$ = 10}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`origin$$, $CellContext`origin$66417$$, 0], 
+        Hold[$CellContext`ww$$, $CellContext`ww$66418$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        drawTx`DrawWin[$CellContext`origin$$, $CellContext`ww$$, 4], 
+        Map[drawTx`DrawPacketTx[#]& , $CellContext`lstPck]], 
+      "Specifications" :> {{$CellContext`origin$$, 0, 
+         Dynamic[100 - $CellContext`ww$$]}, {$CellContext`ww$$, 10, 50}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{407., {115., 120.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.7178510082771273`*^9, 3.717852225454816*^9, 3.7184562308742323`*^9, 
+   3.718456367994314*^9, 3.7184565314844513`*^9, 3.718456618292192*^9, {
+   3.7184566848477182`*^9, 3.718456709058766*^9}, {3.7184567636498117`*^9, 
+   3.718456773303515*^9}, 3.718456815038924*^9, {3.718456881073739*^9, 
+   3.7184569206702833`*^9}, 3.7184570899298563`*^9, {3.7184571372326317`*^9, 
+   3.7184571529331913`*^9}, {3.718457426374662*^9, 3.718457460536334*^9}, {
+   3.718457509498391*^9, 3.718457525299796*^9}, 3.7184576703943443`*^9, {
+   3.718457778008554*^9, 3.718457818668234*^9}, 3.7184579244201717`*^9, {
+   3.7184582622835407`*^9, 
+   3.71845827018649*^9}},ExpressionUUID->"9d09f805-2101-4c9f-bbae-\
+c2918331d141"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FifoSchedulling", "[", 
+   RowBox[{"arrivals_", ",", "service_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"n", ",", "checkTime"}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"n", "=", "1"}], ";", 
+     RowBox[{"checkTime", "=", 
+      RowBox[{"arrivals", "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], ";", "\n", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"checkTime", ">=", "#"}], ",", 
+           RowBox[{"checkTime", "+=", 
+            RowBox[{"service", "[", 
+             RowBox[{"[", 
+              RowBox[{"n", "++"}], "]"}], "]"}]}], ",", 
+           RowBox[{"checkTime", "=", 
+            RowBox[{"#", "+", 
+             RowBox[{"service", "[", 
+              RowBox[{"[", 
+               RowBox[{"n", "++"}], "]"}], "]"}]}]}]}], "]"}], ")"}], "&"}], 
+       ",", "arrivals"}], "]"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.718456272225111*^9, 
+  3.7184563112722187`*^9}},ExpressionUUID->"1ec26b84-9593-41a3-a7bb-\
+46f1e497638b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"InsertionTimeCal", "[", 
+   RowBox[{"depar_", ",", "serv_"}], "]"}], ":=", "\[IndentingNewLine]", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"i", ",", "inserTime"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"i", "=", "0"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"inserTime", "=", 
+      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "0"}], ",", 
+       RowBox[{"i", "<", 
+        RowBox[{"Length", "[", "depar", "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"i", "++"}], ";", 
+        RowBox[{"inserTime", "=", 
+         RowBox[{"Join", "[", 
+          RowBox[{"inserTime", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"depar", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], "-", 
+             RowBox[{"serv", "[", 
+              RowBox[{"[", "i", "]"}], "]"}]}], "}"}]}], "]"}]}]}]}], "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", "inserTime", "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.718456300811907*^9, 3.718456307093967*^9}, {
+  3.718458042014489*^9, 
+  3.71845804224212*^9}},ExpressionUUID->"f5756f28-80c6-4160-86a2-\
+75072b63addf"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"lamda", "=", "70"}], ";", 
+  RowBox[{"mu", "=", "100"}], ";", 
+  RowBox[{"numPaquetes", "=", "100"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"InterArrivalsTime", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"RandomExp", "[", "lamda", "]"}], ",", "numPaquetes"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ArrivalsTime", "=", 
+   RowBox[{"Accumulate", "[", "InterArrivalsTime", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ServTime", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"RandomExp", "[", "mu", "]"}], ",", "numPaquetes"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"DeparturesTimes", "=", 
+   RowBox[{"FifoSchedulling", "[", 
+    RowBox[{"ArrivalsTime", ",", "ServTime"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"InsertionTime", "=", 
+   RowBox[{"InsertionTimeCal", "[", 
+    RowBox[{"DeparturesTimes", ",", "ServTime"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tprop", "=", "0.05"}], ";", 
+  RowBox[{"tack", "=", "0.004"}], ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{3.718458209428932*^9, 
+  3.718458316736327*^9},ExpressionUUID->"0117b4df-cb0c-4b44-a8d2-\
+6c9bde81d596"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"CalculoPaquetes", "[", 
+    RowBox[{"insertionTime_", ",", "servTime_", ",", "N_"}], "]"}], ":=", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"n", ",", "paquetes", ",", "i"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"n", "=", "0"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"paquetes", "=", 
+       RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"i", "=", "0"}], ",", 
+        RowBox[{"i", "<", 
+         RowBox[{"Length", "[", "insertionTime", "]"}]}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"i", "++"}], ";", 
+         RowBox[{"paquetes", "=", 
+          RowBox[{"Join", "[", 
+           RowBox[{"paquetes", ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"insertionTime", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], ",", 
+              RowBox[{"9600", "*", 
+               RowBox[{"servTime", "[", 
+                RowBox[{"[", "i", "]"}], "]"}]}], ",", "n", ",", "0", ",", 
+              "0"}], "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"n", "\[Equal]", 
+            RowBox[{"N", "-", "1"}]}], ",", 
+           RowBox[{"n", "=", "0"}], ",", 
+           RowBox[{"n", "++"}]}], "]"}], ";"}]}], "\[IndentingNewLine]", 
+       "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Return", "[", 
+       RowBox[{"Partition", "[", 
+        RowBox[{"paquetes", ",", "5"}], "]"}], "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.7184583245984383`*^9, 
+  3.718458331637218*^9}},ExpressionUUID->"00b6aa16-1c1c-4baa-8f67-\
+45344942fe42"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.71845834139187*^9},ExpressionUUID->"0a67f35c-2508-462c-ac96-da7f06b54719"]
 },
-WindowSize->{1295, 744},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{1295, 716},
+WindowMargins->{{647, Automatic}, {0, Automatic}},
 FrontEndVersion->"11.2 for Linux x86 (64-bit) (September 10, 2017)",
 StyleDefinitions->"Default.nb"
 ]
@@ -247,19 +668,22 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 254, 5, 55, "Input",ExpressionUUID->"a3b54caf-223b-4082-8540-5d8d6285e527"],
+Cell[558, 20, 489, 11, 78, "Input",ExpressionUUID->"a3b54caf-223b-4082-8540-5d8d6285e527"],
 Cell[CellGroupData[{
-Cell[837, 29, 683, 18, 124, "Input",ExpressionUUID->"522145b0-2041-4f05-8dbf-6e90edbd13fe"],
-Cell[1523, 49, 1364, 27, 137, "Output",ExpressionUUID->"146f5157-6eed-4194-a92a-88c1f3303952"]
+Cell[1072, 35, 1052, 26, 147, "Input",ExpressionUUID->"522145b0-2041-4f05-8dbf-6e90edbd13fe"],
+Cell[2127, 63, 1087, 21, 137, "Output",ExpressionUUID->"b4db257b-d284-4144-972e-e3ac72caff3a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2924, 81, 1062, 28, 101, "Input",ExpressionUUID->"820b21a2-0e6d-4ed1-82bb-246842f34c95"],
-Cell[3989, 111, 5158, 98, 137, "Output",ExpressionUUID->"1b2deba3-c131-438e-84a5-9bced3d8c867"]
+Cell[3251, 89, 2336, 57, 216, "Input",ExpressionUUID->"820b21a2-0e6d-4ed1-82bb-246842f34c95"],
+Cell[5590, 148, 15674, 290, 137, "Output",ExpressionUUID->"e08e2d1c-a9b6-4558-a45d-aacc01dcdc5e"],
+Cell[21267, 440, 2676, 50, 254, "Output",ExpressionUUID->"9d09f805-2101-4c9f-bbae-c2918331d141"]
 }, Open  ]],
-Cell[9162, 212, 711, 19, 101, "Input",ExpressionUUID->"6606d92b-d25e-4053-9e88-a80297c310bd"]
+Cell[23958, 493, 1123, 32, 147, "Input",ExpressionUUID->"1ec26b84-9593-41a3-a7bb-46f1e497638b"],
+Cell[25084, 527, 1291, 34, 193, "Input",ExpressionUUID->"f5756f28-80c6-4160-86a2-75072b63addf"],
+Cell[26378, 563, 1281, 36, 193, "Input",ExpressionUUID->"0117b4df-cb0c-4b44-a8d2-6c9bde81d596"],
+Cell[27662, 601, 1825, 47, 308, "Input",ExpressionUUID->"00b6aa16-1c1c-4baa-8f67-45344942fe42"],
+Cell[29490, 650, 144, 2, 55, "Input",ExpressionUUID->"0a67f35c-2508-462c-ac96-da7f06b54719"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
