@@ -10,39 +10,60 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13284,        381]
-NotebookOptionsPosition[     12362,        358]
-NotebookOutlinePosition[     12703,        373]
-CellTagsIndexPosition[     12660,        370]
+NotebookDataLength[     20739,        538]
+NotebookOptionsPosition[     19812,        515]
+NotebookOutlinePosition[     20149,        530]
+CellTagsIndexPosition[     20106,        527]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["\<\
-
-Caso 0: Modelado Firewall\
-\>", "Title",
- CellChangeTimes->{{3.725018546690049*^9, 
-  3.7250185910420017`*^9}},ExpressionUUID->"31da8479-ca36-41ff-8b77-\
+Cell["Caso 0: Modelado Firewall de flujo \[UAcute]nico", "Title",
+ CellChangeTimes->{{3.725018546690049*^9, 3.7250185910420017`*^9}, {
+  3.7261407524240723`*^9, 
+  3.7261407701597652`*^9}},ExpressionUUID->"31da8479-ca36-41ff-8b77-\
 464a08f14a4d"],
 
 Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", 
-  RowBox[{"<<", "/home/pablo/Escritorio/Uni/RRT/RandomData.m"}]}]], "Input",
- CellChangeTimes->{{3.7250185936126547`*^9, 
-  3.7250186490407953`*^9}},ExpressionUUID->"e77b4df2-1292-414c-9a45-\
+ RowBox[{"<<", "/home/pablo/Escritorio/Uni/RRT/RandomData.m"}]], "Input",
+ CellChangeTimes->{{3.7250185936126547`*^9, 3.7250186490407953`*^9}, 
+   3.726140782672428*^9},ExpressionUUID->"e77b4df2-1292-414c-9a45-\
 97b3a30b6bee"],
 
 Cell["\<\
-Se calculan las probabilidades de estado en funci\[OAcute]n de Lambda (tasa \
-de llegada de los paquetes al firewall), mu (tasa de servicio del paquete al \
-enlace) y r (tasa de comprobaci\[OAcute]n de reglas)
+Se calculan las probabilidades de estado en funci\[OAcute]n de:
+Lambda (tasa de llegada de los paquetes al firewall), 
+Mu (tasa de servicio del paquete al enlace) y 
+R (tasa de comprobaci\[OAcute]n de reglas), para un numero de reglas
+N(numero de estados en el firewall)+1(estado de servicio) y una cola de \
+paquetes
+K(tama\[NTilde]o de la cola de entrada al firewall)
+
+Seguidamente se obtienen los siguiente datos estad\[IAcute]sticos:
+p0(probabilidad de no haber paquetes en el firewall) 
+P[K,N](probabilidad de estado para cada regla y paquetes en sistema)
+X(tiempo medio de servicio)
+gamma(throughput para el flujo lambda 1)
+Ploss(probabilidad de p\[EAcute]rdida de paquetes en el firewall)
+KA(numero medio de paquetes en el sistema)
+W(tiempo medio en el sistema)
+Wq(tiempo medio de espera)
+Uutil(utilizaci\[OAcute]n de la CPU del firewall)
+
+
+*NOTA: Hay datos como el thoughput  y la p\[EAcute]rdida de paquetes que \
+pueden ser calculados de dos maneras
 \
 \>", "Text",
- CellChangeTimes->{{3.725018700839509*^9, 
-  3.7250188016635036`*^9}},ExpressionUUID->"dd1afaab-19e8-46cb-9c9f-\
+ CellChangeTimes->{{3.725018700839509*^9, 3.7250188016635036`*^9}, {
+  3.726137945152787*^9, 3.726138253865407*^9}, {3.726140642303142*^9, 
+  3.726140746715953*^9}, {3.7261408095854177`*^9, 3.72614081263661*^9}, {
+  3.726140884536751*^9, 3.726140884589913*^9}, {3.726140925156541*^9, 
+  3.726141029737658*^9}, {3.726141101367999*^9, 3.726141133457926*^9}, {
+  3.7261415737102337`*^9, 3.726141594493751*^9}, {3.726143440334346*^9, 
+  3.726143448141479*^9}},ExpressionUUID->"dd1afaab-19e8-46cb-9c9f-\
 657367c81a89"],
 
 Cell[CellGroupData[{
@@ -263,9 +284,94 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"MatrixForm", "[", "P", "]"}], "//", "N"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"p0", "+", 
-   RowBox[{"Total", "[", 
-    RowBox[{"Flatten", "[", "P", "]"}], "]"}]}], "//", "N"}]}], "Input",
+  RowBox[{"X", "=", 
+   RowBox[{
+    FractionBox["1", "mu"], "+", 
+    FractionBox[
+     RowBox[{"ene", "-", "1"}], "r"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Ploss", "=", 
+   RowBox[{"1", "-", 
+    FractionBox[
+     RowBox[{"1", "-", "p0"}], 
+     RowBox[{"lambda", "*", "X"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Ploss1", "=", 
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"n", "=", "1"}], "ene"], 
+    RowBox[{"P", "[", 
+     RowBox[{"[", 
+      RowBox[{"ka", ",", "n"}], "]"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"KA", "=", 
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"k", "=", "1"}], "ka"], 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"n", "=", "1"}], "ene"], 
+     RowBox[{"k", "*", 
+      RowBox[{"P", "[", 
+       RowBox[{"[", 
+        RowBox[{"k", ",", "n"}], "]"}], "]"}]}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gamma", "=", 
+   RowBox[{"mu", "*", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"k", "=", "1"}], "ka"], 
+     RowBox[{"P", "[", 
+      RowBox[{"[", 
+       RowBox[{"k", ",", "ene"}], "]"}], "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gamma1", "=", 
+   FractionBox[
+    RowBox[{"1", "-", "p0"}], "X"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gamma2", "=", 
+   RowBox[{"lambda", "*", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", "Ploss"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"W", "=", 
+   RowBox[{"KA", "/", "gamma"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Wq", "=", 
+   RowBox[{"W", "-", "X"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Uutil", "=", 
+   RowBox[{"gamma", "*", "X"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{
+   "\"\<Datos estad\[IAcute]sticos de un firewall de flujo \[UAcute]nico: \\n\
+\\n\>\"", ",", "\[IndentingNewLine]", "\"\<Throughput 0  = \>\"", ",", 
+    RowBox[{"gamma", "//", "N"}], ",", "\"\<\\n\>\"", ",", 
+    "\[IndentingNewLine]", "\"\<Throughput 1  = \>\"", ",", 
+    RowBox[{"gamma1", "//", "N"}], ",", "\"\<\\n\>\"", ",", 
+    "\[IndentingNewLine]", "\"\<Throughput 2  = \>\"", ",", 
+    RowBox[{"gamma2", "//", "N"}], ",", "\"\<\\n\>\"", ",", 
+    "\[IndentingNewLine]", "\"\<Tiempo medio de servicio = \>\"", ",", 
+    RowBox[{"X", "//", "N"}], ",", "\"\<\\n\>\"", ",", "\[IndentingNewLine]", 
+    "\"\<Probabilidad de bloqueo 0 = \>\"", ",", 
+    RowBox[{"Ploss", "//", "N"}], ",", 
+    RowBox[{"+", "\"\<\\n\>\""}], ",", "\[IndentingNewLine]", 
+    "\"\<Probabilidad de bloqueo 1 = \>\"", ",", 
+    RowBox[{"Ploss1", "//", "N"}], ",", "\"\<\\n\>\"", ",", 
+    "\[IndentingNewLine]", 
+    "\"\<Numero medio de paquetes en el sistema = \>\"", ",", 
+    RowBox[{"KA", "//", "N"}], ",", "\"\<\\n\>\"", ",", 
+    "\[IndentingNewLine]", "\"\<Tiempo medio en el sistema = \>\"", ",", 
+    RowBox[{"W", "//", "N"}], ",", "\"\<\\n\>\"", ",", "\[IndentingNewLine]", 
+    "\"\<Tiempo medio de espera del sistema = \>\"", ",", 
+    RowBox[{"Wq", "//", "N"}], ",", "\"\<\\n\>\"", ",", 
+    "\[IndentingNewLine]", "\"\<Carga de la CPU = \>\"", ",", 
+    RowBox[{"Uutil", "//", "N"}], ",", "\"\<\\n\>\""}], "]"}], 
+  ";"}]}], "Input",
  CellChangeTimes->{{3.725018653055922*^9, 3.7250186819841423`*^9}, {
    3.725018806303043*^9, 3.72501882190685*^9}, {3.725019045144226*^9, 
    3.725019078206994*^9}, {3.7250191458868628`*^9, 3.725019314249023*^9}, {
@@ -284,16 +390,28 @@ Cell[BoxData[{
    3.725021952070734*^9}, {3.725022027331765*^9, 3.7250220866540403`*^9}, {
    3.7250221544544067`*^9, 3.725022215367229*^9}, {3.725022264621068*^9, 
    3.725022280439608*^9}, 3.7250227360748787`*^9, {3.72502280672805*^9, 
-   3.725022806831316*^9}},ExpressionUUID->"4dbfa38d-564b-45a1-a881-\
+   3.725022806831316*^9}, {3.7261379008859987`*^9, 3.7261379146031637`*^9}, {
+   3.726139027432198*^9, 3.726139341822641*^9}, {3.726139378511277*^9, 
+   3.726139388591514*^9}, {3.726139514419219*^9, 3.7261396208095207`*^9}, {
+   3.7261396733105907`*^9, 3.726139681308323*^9}, {3.726139759405218*^9, 
+   3.726139797112403*^9}, {3.72613983055451*^9, 3.7261398533867292`*^9}, {
+   3.726139916561448*^9, 3.7261400166981373`*^9}, {3.726140137399667*^9, 
+   3.726140249007951*^9}, 3.726140325179055*^9, {3.726140381714213*^9, 
+   3.726140383780361*^9}, {3.726140426297082*^9, 3.726140440233452*^9}, {
+   3.726140470793419*^9, 3.726140602358315*^9}, {3.726141066341608*^9, 
+   3.726141093134069*^9}, {3.7261412951186743`*^9, 3.7261415564460297`*^9}, {
+   3.7261416026578817`*^9, 3.726141881611467*^9}, {3.7261420744341097`*^9, 
+   3.726142081685767*^9}, {3.7261421117973747`*^9, 3.726142344232205*^9}, {
+   3.726142393625996*^9, 3.726142424551854*^9}, {3.7261425574311867`*^9, 
+   3.726142619211438*^9}, {3.7261426503761053`*^9, 3.726142661794519*^9}, {
+   3.726142753688095*^9, 3.726142820832144*^9}, {3.726143090330171*^9, 
+   3.7261431123785887`*^9}},ExpressionUUID->"4dbfa38d-564b-45a1-a881-\
 3f988b10dc36"],
 
 Cell[BoxData["5.500698329295759`*^-6"], "Output",
- CellChangeTimes->{
-  3.725021854486759*^9, 3.7250219601256733`*^9, {3.725022030554653*^9, 
-   3.725022088805181*^9}, {3.72502220013717*^9, 3.7250222164722443`*^9}, 
-   3.7250222882111073`*^9, 3.7250227377936153`*^9, 
-   3.7250228078916397`*^9},ExpressionUUID->"39aeb0b3-80a3-4261-a430-\
-76b3f31244f9"],
+ CellChangeTimes->{3.726143174658218*^9, 
+  3.726143459638344*^9},ExpressionUUID->"d2b141e5-121f-4a43-aa82-\
+34b9b691490b"],
 
 Cell[BoxData[
  TagBox[
@@ -339,25 +457,64 @@ Cell[BoxData[
         Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
   Function[BoxForm`e$, 
    MatrixForm[BoxForm`e$]]]], "Output",
- CellChangeTimes->{
-  3.725021854486759*^9, 3.7250219601256733`*^9, {3.725022030554653*^9, 
-   3.725022088805181*^9}, {3.72502220013717*^9, 3.7250222164722443`*^9}, 
-   3.7250222882111073`*^9, 3.7250227377936153`*^9, 
-   3.725022807897336*^9},ExpressionUUID->"5792e4c1-ab77-4b91-ad5f-\
-dc7a5ee3a8e2"],
+ CellChangeTimes->{3.726143174658218*^9, 
+  3.726143459642288*^9},ExpressionUUID->"b0c86f4d-373a-4def-bb42-\
+4e2cbe0dd919"],
 
-Cell[BoxData["0.9999999999999998`"], "Output",
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Datos estad\[IAcute]sticos de un firewall de flujo \
+\[UAcute]nico: \\n\\n\"\>", "\[InvisibleSpace]", "\<\"Throughput 0  = \"\>", 
+   "\[InvisibleSpace]", "0.9282271647886738`", 
+   "\[InvisibleSpace]", "\<\"\\n\"\>", 
+   "\[InvisibleSpace]", "\<\"Throughput 1  = \"\>", "\[InvisibleSpace]", 
+   "1.0344770682431077`", "\[InvisibleSpace]", "\<\"\\n\"\>", 
+   "\[InvisibleSpace]", "\<\"Throughput 2  = \"\>", "\[InvisibleSpace]", 
+   "1.0344770682431077`", "\[InvisibleSpace]", "\<\"\\n\"\>", 
+   "\[InvisibleSpace]", "\<\"Tiempo medio de servicio = \"\>", 
+   "\[InvisibleSpace]", "0.9666666666666667`", 
+   "\[InvisibleSpace]", "\<\"\\n\"\>", 
+   "\[InvisibleSpace]", "\<\"Probabilidad de bloqueo 0 = \"\>", 
+   "\[InvisibleSpace]", "0.48276146587844615`", 
+   "\[InvisibleSpace]", "\<\"\\n\"\>", 
+   "\[InvisibleSpace]", "\<\"Probabilidad de bloqueo 1 = \"\>", 
+   "\[InvisibleSpace]", "0.535886417605663`", 
+   "\[InvisibleSpace]", "\<\"\\n\"\>", 
+   "\[InvisibleSpace]", "\<\"Numero medio de paquetes en el sistema = \"\>", 
+   "\[InvisibleSpace]", "9.333412125540214`", 
+   "\[InvisibleSpace]", "\<\"\\n\"\>", 
+   "\[InvisibleSpace]", "\<\"Tiempo medio en el sistema = \"\>", 
+   "\[InvisibleSpace]", "10.05509478670032`", 
+   "\[InvisibleSpace]", "\<\"\\n\"\>", 
+   "\[InvisibleSpace]", "\<\"Tiempo medio de espera del sistema = \"\>", 
+   "\[InvisibleSpace]", "9.088428120033653`", 
+   "\[InvisibleSpace]", "\<\"\\n\"\>", 
+   "\[InvisibleSpace]", "\<\"Carga de la CPU = \"\>", "\[InvisibleSpace]", 
+   "0.897286259295718`", "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm[
+  "Datos estad\[IAcute]sticos de un firewall de flujo \[UAcute]nico: \n\n", 
+   "Throughput 0  = ", 0.9282271647886738, "\n", "Throughput 1  = ", 
+   1.0344770682431077`, "\n", "Throughput 2  = ", 1.0344770682431077`, "\n", 
+   "Tiempo medio de servicio = ", 0.9666666666666667, "\n", 
+   "Probabilidad de bloqueo 0 = ", 0.48276146587844615`, "\n", 
+   "Probabilidad de bloqueo 1 = ", 0.535886417605663, "\n", 
+   "Numero medio de paquetes en el sistema = ", 9.333412125540214, "\n", 
+   "Tiempo medio en el sistema = ", 10.05509478670032, "\n", 
+   "Tiempo medio de espera del sistema = ", 9.088428120033653, "\n", 
+   "Carga de la CPU = ", 0.897286259295718, "\n"],
+  Editable->False]], "Print",
  CellChangeTimes->{
-  3.725021854486759*^9, 3.7250219601256733`*^9, {3.725022030554653*^9, 
-   3.725022088805181*^9}, {3.72502220013717*^9, 3.7250222164722443`*^9}, 
-   3.7250222882111073`*^9, 3.7250227377936153`*^9, 
-   3.7250228078996553`*^9},ExpressionUUID->"b7629053-357b-4341-92e9-\
-f8f402808412"]
+  3.726141953063183*^9, 3.726142090531904*^9, 3.726142153550671*^9, {
+   3.7261422625449343`*^9, 3.72614228349282*^9}, 3.726142345560602*^9, {
+   3.726142426931831*^9, 3.726142430491617*^9}, 3.72614266425804*^9, 
+   3.726142875835973*^9, 3.726143174663166*^9, 
+   3.726143459645596*^9},ExpressionUUID->"3b6e779f-3017-4b3e-91d2-\
+b649b80f1c2f"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{648, 716},
-WindowMargins->{{252, Automatic}, {-42, Automatic}},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
 FrontEndVersion->"11.2 for Linux x86 (64-bit) (September 10, 2017)",
 StyleDefinitions->"Default.nb"
 ]
@@ -373,14 +530,14 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 179, 6, 160, "Title",ExpressionUUID->"31da8479-ca36-41ff-8b77-464a08f14a4d"],
-Cell[762, 30, 253, 5, 55, "Input",ExpressionUUID->"e77b4df2-1292-414c-9a45-97b3a30b6bee"],
-Cell[1018, 37, 362, 8, 81, "Text",ExpressionUUID->"dd1afaab-19e8-46cb-9c9f-657367c81a89"],
+Cell[580, 22, 246, 4, 160, "Title",ExpressionUUID->"31da8479-ca36-41ff-8b77-464a08f14a4d"],
+Cell[829, 28, 240, 4, 31, "Input",ExpressionUUID->"e77b4df2-1292-414c-9a45-97b3a30b6bee"],
+Cell[1072, 34, 1498, 32, 541, "Text",ExpressionUUID->"dd1afaab-19e8-46cb-9c9f-657367c81a89"],
 Cell[CellGroupData[{
-Cell[1405, 49, 7886, 238, 745, "Input",ExpressionUUID->"4dbfa38d-564b-45a1-a881-3f988b10dc36"],
-Cell[9294, 289, 352, 6, 37, "Output",ExpressionUUID->"39aeb0b3-80a3-4261-a430-76b3f31244f9"],
-Cell[9649, 297, 2333, 49, 217, "Output",ExpressionUUID->"5792e4c1-ab77-4b91-ad5f-dc7a5ee3a8e2"],
-Cell[11985, 348, 349, 6, 68, "Output",ExpressionUUID->"b7629053-357b-4341-92e9-f8f402808412"]
+Cell[2595, 70, 12156, 338, 1387, "Input",ExpressionUUID->"4dbfa38d-564b-45a1-a881-3f988b10dc36"],
+Cell[14754, 410, 173, 3, 37, "Output",ExpressionUUID->"d2b141e5-121f-4a43-aa82-34b9b691490b"],
+Cell[14930, 415, 2156, 46, 217, "Output",ExpressionUUID->"b0c86f4d-373a-4def-bb42-4e2cbe0dd919"],
+Cell[17089, 463, 2695, 48, 290, "Print",ExpressionUUID->"3b6e779f-3017-4b3e-91d2-b649b80f1c2f"]
 }, Open  ]]
 }, Open  ]]
 }
